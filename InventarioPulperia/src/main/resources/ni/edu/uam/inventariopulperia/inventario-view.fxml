@@ -1,16 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="ni.edu.uam.inventariopulperia.InventarioController">
+<VBox alignment="TOP_CENTER" prefHeight="569.0" prefWidth="508.0" spacing="15.0" style="-fx-background-color: light grey; -fx-border-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.inventariopulperia.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="15.0" />
     </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+   <children>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="163.0" text="Gestion Pulperia">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="54.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../java/ni/edu/uam/inventariopulperia/store-front.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="TOP_CENTER" prefHeight="27.0" prefWidth="362.0" spacing="10.0">
+         <children>
+            <Label text="Buscador:" />
+            <TextField fx:id="txtBuscar" onKeyPressed="#buscarProducto" prefHeight="26.0" prefWidth="263.0" promptText="Presiona &quot;ENTER&quot; para confirmar" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <TableView fx:id="tvInventario" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Codigo" />
+            <TableColumn fx:id="colPrecio" prefWidth="75.0" text="Precio" />
+            <TableColumn fx:id="colCantidad" prefWidth="75.0" text="Cantidad" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label text="Añadir Productos">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font></Label>
+      <HBox alignment="TOP_CENTER" prefHeight="123.0" prefWidth="466.0" spacing="20.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="149.0" prefWidth="209.0" spacing="5.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="47.0" prefWidth="220.0" spacing="5.0">
+                     <children>
+                        <Label text="Codigo:" />
+                        <TextField fx:id="txtCodigo" prefHeight="26.0" prefWidth="130.0" promptText="M-001" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="47.0" prefWidth="220.0" spacing="5.0">
+                     <children>
+                        <Label text="Nombre:" />
+                        <TextField fx:id="txtNombre" prefHeight="26.0" prefWidth="130.0" promptText="Barra Bimbo" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children></VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="149.0" prefWidth="209.0" spacing="5.0">
+               <children>
+                  <HBox prefHeight="51.0" prefWidth="210.0" spacing="5.0">
+                     <children>
+                        <Label text="Precio:" />
+                        <TextField fx:id="txtPrecio" prefHeight="26.0" prefWidth="130.0" promptText="C$ 105.00" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="51.0" prefWidth="210.0" spacing="5.0">
+                     <children>
+                        <Label text="Cantidad:">
+                           <font>
+                              <Font name="Cambria" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCantidad" prefHeight="26.0" prefWidth="119.0" promptText="50" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></HBox>
+      <Button fx:id="btnAgregar" mnemonicParsing="false" text="Agregar">
+         <font>
+            <Font name="Cambria Bold Italic" size="13.0" />
+         </font>
+      </Button>
+   </children>
 </VBox>
