@@ -3,7 +3,7 @@ package ni.edu.uam.inventariopulperia;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class InventarioController {
     @FXML
     private Label welcomeText;
 
