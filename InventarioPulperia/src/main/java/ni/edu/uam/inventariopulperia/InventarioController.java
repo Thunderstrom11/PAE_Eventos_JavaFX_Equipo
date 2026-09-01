@@ -3,10 +3,7 @@ package ni.edu.uam.inventariopulperia;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import ni.edu.uam.inventariopulperia.model.Producto;
 
@@ -43,6 +40,16 @@ public class InventarioController {
 
         tvInventario.setItems(productos);
     }
+
+    private void mostrarAlerta(String titulo, String mensaje){
+        Alert alerta = new Alert(Alert.AlertType.WARNING);
+        alerta.setTitle(titulo);
+        alerta.setContentText(mensaje);
+        alerta.setHeaderText(null);
+        alerta.showAndWait();
+    }
+
+
 
 
 }
