@@ -84,7 +84,7 @@ public class TiendaController {
                 mostrarAlerta("Error", "El precio debe ser mayor a 0 y el stock no puede ser negativo");
                 return;
             }
-            if(getClass().getResource("/ni/edu/uam/tiendaartesanias/" + rutaImagen)==null){
+            if(getClass().getResourceAsStream(rutaImagen)==null){
                 mostrarAlerta("Imagen no encontrada", "No existe " + rutaImagen + " en resources");
                 return;
             }
@@ -137,8 +137,7 @@ public class TiendaController {
                 seleccionado.getCategoria(),
                 seleccionado.getPrecio(),
                 seleccionado.getStock() - 1,
-                seleccionado.getImagen());
-        articulos.set(indice, actualizado);
+                seleccionado.getRutaImagen());
 
         Alert venta = new Alert(Alert.AlertType.INFORMATION);
         venta.setTitle("Venta registrada");
