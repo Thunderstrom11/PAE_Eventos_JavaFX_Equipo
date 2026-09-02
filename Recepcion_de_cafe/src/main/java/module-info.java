@@ -2,6 +2,7 @@ module ni.edu.uam.recepcion_de_cafe {
     requires javafx.controls;
     requires javafx.fxml;
     requires static lombok;
+    requires java.desktop;
 
 
     opens ni.edu.uam.recepcion_de_cafe to javafx.fxml;
