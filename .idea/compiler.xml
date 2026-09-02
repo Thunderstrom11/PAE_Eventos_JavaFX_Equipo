@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Recepcion_de_cafe" />
+        <module name="TiendaArtesanias" />
       </profile>
       <profile name="Annotation profile for InventarioPulperia" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
