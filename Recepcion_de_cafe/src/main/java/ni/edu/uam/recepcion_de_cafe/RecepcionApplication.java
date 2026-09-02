@@ -11,7 +11,7 @@ public class RecepcionApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(RecepcionApplication.class.getResource("recepcion-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 420, 640);
         stage.setTitle("Recepcion de cafe");
         stage.setScene(scene);
         stage.show();
