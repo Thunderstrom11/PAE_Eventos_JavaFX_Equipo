@@ -3,7 +3,7 @@ package ni.edu.uam.recepcion_de_cafe;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class RecepcionController {
     @FXML
     private Label welcomeText;
 
