@@ -53,7 +53,7 @@ public class RecepcionController {
     }
 
     @FXML
-    private void agregarLote(ActionEvent event) {
+    private void agregarLote(ActionEvent event ) {
         try {
             Lote lote = leerDatos();
             if (loteDAO.buscarPorCodigo(lote.getCodigo()) != null) {
