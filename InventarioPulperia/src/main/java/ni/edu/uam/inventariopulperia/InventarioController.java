@@ -2,6 +2,7 @@ package ni.edu.uam.inventariopulperia;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -10,7 +11,6 @@ import javafx.scene.input.KeyEvent;
 import ni.edu.uam.inventariopulperia.model.Producto;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
 
 public class InventarioController {
     @FXML
@@ -57,7 +57,7 @@ public class InventarioController {
             }
 
             for (Producto p: productos){
-                if(p.getNombre().equalsIgnoreCase(texto)){
+                if(p.getNombre().equalsIgnoreCase(texto) || p.getCodigo().equalsIgnoreCase(texto)){
                     tvInventario.getSelectionModel().select(p);
                     tvInventario.scrollTo(p);
                     return;

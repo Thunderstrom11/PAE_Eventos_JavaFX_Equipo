@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="TOP_CENTER" prefHeight="569.0" prefWidth="508.0" spacing="15.0" style="-fx-background-color: light grey; -fx-border-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.inventariopulperia.HelloController">
+<VBox alignment="TOP_CENTER" prefHeight="569.0" prefWidth="508.0" spacing="15.0" style="-fx-background-color: light grey; -fx-border-color: black;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.inventariopulperia.InventarioController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="15.0" />
     </padding>
@@ -101,7 +101,7 @@
                </children>
             </VBox>
          </children></HBox>
-      <Button fx:id="btnAgregar" mnemonicParsing="false" text="Agregar">
+      <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#agregarProducto" text="Agregar">
          <font>
             <Font name="Cambria Bold Italic" size="13.0" />
          </font>
