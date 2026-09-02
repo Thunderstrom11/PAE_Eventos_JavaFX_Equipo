@@ -1,0 +1,5 @@
+ni\edu\uam\tiendaartesanias\TiendaApplication.class
+module-info.class
+ni\edu\uam\tiendaartesanias\model\Articulo.class
+ni\edu\uam\tiendaartesanias\Launcher.class
+ni\edu\uam\tiendaartesanias\TiendaController.class
